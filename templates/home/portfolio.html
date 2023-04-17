@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  {% load static %}
+
+  {% static 'img' as baseurl %}
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <link rel="shortcut icon" href="#">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/portfolio.css' %}" rel="stylesheet">
+  <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+  <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+   <!-- Attribution : https://michalsnik.github.io/aos/ -->
+   <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/4e544dfbd7.js" crossorigin="anonymous"></script>
+  <title> Portfolio</title>
+  <style>
+    .mypadding h2
+{
+margin-top: 3vh;
+}
+
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="elfsight-app-9803d9b2-b24d-4a44-818d-53efc83fa902"></div>
+  <!--==========================
+    Header
+  ============================-->
+
+  <header id="header" style="background: black;">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="/about">Rahul<span>Pareek</span></a></h1>
+        
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/portfolio">PortFolio</a></li>
+      
+          <li class=""><a href="/about">About Me</a></li>
+          <li class=""><a href="/contact">Contact Me</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert"
+    style="margin-top:15vh;margin-bottom:0vh;">
+    <strong>{{message.tags}}</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  <!--==========================
+    Intro Section
+  ============================-->
+
+  <section id="intro" style="background: url('static/img/bg/home.jpg') top center;width: 100%;height: 100vh;  
+  background-size: cover; overflow: hidden; position: relative;z-index:10">
+  <div class="intro-container wow fadeIn">
+    <h1 class="mb-4 pb-0">Welcome to<br><span>My Portfolio</span></h1>
+   
+    <a href="#aboutsection" class="about-btn scrollto">About Me</a>
+  </div>
+</section>
+  <section id="aboutsection">
+    <div class="page-content">
+      <div class="container-fluid px-0">
+         <div class="resume-container">
+            <div class="shadow-1-strong bg-white" id="intro">
+               <div class="bg-info text-white">
+                  <div class="cover bg-image">
+                     <!-- <img src="images/diablobg.jpg"/> -->
+                     <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+                        <div class="text-center" style="padding: 2.5rem!important;">
+                           <div class="avatar p-1"><img class="img-thumbnail shadow-4-strong rounded-circle"
+                                 src="{% static 'img/my img.jpg' %}" width="160" height="160" />
+                              <div class="circle" style="animation-delay: -3s"></div>
+                              <div class="circle" style="animation-delay: -2s"></div>
+                              <div class="circle" style="animation-delay: -1s"></div>
+                              <div class="circle" style="animation-delay: 0s"></div>
+                           </div>
+                           <div class="header-bio mt-3">
+                              <div data-aos="zoom-in" data-aos-delay="0">
+                                 <h2 class="h1">Rahul Pareek</h2>
+                                 <p>Software Developer</p>
+                              </div>
+                              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                                 <nav role="navigation">
+                                    <ul class="nav justify-content-center">
+                                       <li class="nav-item"><a class="nav-link" href="https://github.com/bisomaticc"
+                                             title="Github"><i class="fab fa-github"></i><span
+                                                class="menu-title sr-only">Github</span></a>
+                                       </li>
+                                       <li class="nav-item"><a class="nav-link"
+                                             href="https://www.linkedin.com/in/rahul-pareek-8a241b14b/" title="LinkedIn"><i
+                                                class="fab fa-linkedin-in"></i><span
+                                                class="menu-title sr-only">LinkedIn</span></a>
+                                    
+                                       </li>
+                                       
+                                    </ul>
+                                 </nav>
+                              </div>
+                              <div class="d-print-none"><a
+                                    class="fancyButton btn btn-outline-light btn-lg shadow-sm mt-1 me-3"
+                                    href="https://drive.google.com/file/d/1su2rk2W4vFtQeawU66zPqZE_yVdMSvAk/view?usp=sharing" data-aos="fade-right"
+                                    data-aos-delay="700">Download CV</a>
+                                 <a class="fancyButton btn btn-default rex-primary-btn-effect-No btn btn-info btn-lg shadow-sm mt-1"
+                                    href="/contact" data-aos="fade-left" data-aos-delay="700">Contact Me</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="shadow-2-strong  p-5 text-white bg-matte" id="about">
+               <div class="about-section">
+                  <div class="row ">
+                     
+                     <div class="col-md-6 mx-auto">
+                        <h2 class="h2 fw-dark text-center ">About Me</h2>
+                        <table id="about-text">
+                           <caption></caption>
+                           <th id="th-about-me"></th>
+                           <tr>
+                              <td>
+                                 <br />
+                                 <i class="fas fa-graduation-cap text-white"> </i>
+                              </td>
+                              <td>
+                                 <br />
+                                 I've pursued B.Tech in Computer Science & Engineering from ACEIT
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <br />
+                                 <i class="fas fa-laptop-code text-white"> </i>
+                              </td>
+                              <td>
+                                 <br />
+                                 Well-versed in Data Structures, Algorithms & Object Oriented Programming Skills,
+                                 Responsive Web
+                                 Development, Open Source Enthusiast
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <br />
+                                 <i class="fas fa-code text-white"> </i>
+                              </td>
+                              <td>
+                                 <br />
+                                 I'm currently working on Python Django and want to work in other web dev field such as nodejs,react.js
+                                
+                              </td>
+                           </tr>
+                        
+                           <br />
+                          
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="shadow-1-strong bg-cublue p-4 text-white" id="skills">
+               <div class="skills-section">
+                  <h2 class="h2 fw-light mb-4">Professional Skills</h2>
+                  <div class="row">
+                     <div class="col-md-3">
+                        <h4 class="h4 fw-light mb-4">Programming Languages</h4>
+                        <div class="mb-3">
+                           <span class="fw-bolder">Python</span>
+                           </div>
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">C++</span>
+                           </div>
+                        </div>
+                       
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">JavaScript</span>
+                  
+                           </div>
+                        </div>
+                      
+                     </div>
+                     <div class="col-md-3">
+                        <h4 class="h4 fw-light mb-4">FrontEnd Development</h4>
+                        <div class="mb-3">
+                           <span class="fw-bolder">HTML5</span>
+                        
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">CSS3</span>
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">Bootstrap 5</span>
+                        </div>
+                    
+    
+                     </div>
+                     <div class="col-md-3">
+                        <h4 class="h4 fw-light mb-4">Frameworks & Libraries</h4>
+                        <div class="mb-3">
+                           <span class="fw-bolder">Django</span>
+                        
+                        </div>
+                      
+                        <div class="mb-3">
+                           <span class="fw-bolder">Bootstrap</span>
+                         
+                        </div>
+                        
+                     </div>
+                     <div class="col-md-3">
+                        <h4 class="h4 fw-light mb-4">Tools/IDEs/Databases</h4>
+                        <div class="mb-3">
+                           <span class="fw-bolder">Git & GitHub</span>
+                          
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">Visual Studio Code</span>
+                         
+                        </div>
+                        <div class="mb-3">
+                           <span class="fw-bolder">PostgreSQL</span>
+                         
+                       
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+          
+                     
+
+
+
+                     <div class="timeline-card-info" data-aos="fade-in" data-aos-delay="200">
+                        <div class="timeline-head px-4 pt-3 d-flex">
+                           <img class="org-logo" src="{% static 'img/experience/Start Up Inc.jpg' %}" alt="" height="40px" width="40px"/>
+                           <div class="h5">Product Developer <br /><span class="text-black h6">Edgeverve</span>
+                           </div>
+                        </div>
+                        <div class="xp-body timeline-body px-4 pb-4">
+                           <div class="text-white text-small mb-3">Feb 2022 - Present</div>
+                           <div>
+                              <ul>
+                                 <li><a class="text-info" href="https://github.com/arpit456jain/Cool-Front-End-Templates">Github Repo</a> &nbsp; | &nbsp;<a class="text-info" href="https://media-exp1.licdn.com/dms/image/C4E2DAQECfiSpSiVaxA/profile-treasury-image-shrink_800_800/0/1622736503934?e=1661706000&v=beta&t=TuZE8lcCwBht5KsFZ7olu3_k1VIqCGigvY8tRtSns7c" target="_blank">Certificate</a></li>
+                                 <li>Clonned some UI templates into webpages</li>                            
+                              </ul>
+                        </div>
+                        </div>
+                     </div>
+
+
+
+                  </div>
+               </div>
+            </div>
+            <div class="shadow-1-strong bg-yellow p-5 text-black" id="education">
+               <div class="education-section">
+                  <h2 class="h2 fw-light mb-4">Education</h2>
+                  <div class="timeline">
+                     <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="0">
+                        <div class="timeline-head px-4 pt-3">
+                           <div class="h5">B.Tech in CSE<br /><span
+                                 class="text-black h6">Arya College of Engineering and IT </span>
+                           </div>
+                        <div class="timeline-body px-4 pb-4">
+                           <div class="text-black text-small mb-3">2017-2021</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+           
+            
+         </div>
+      </div>
+   </div>
+  </section>
+  {% static 'img/skills' as baseurl %}
+{% static 'img/experience' as baseurl2 %}
+
+
+
+
+
+
+
+
+
+  {% include "footer.html" %}
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
